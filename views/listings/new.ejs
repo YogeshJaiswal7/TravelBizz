@@ -1,0 +1,54 @@
+<% layout("/layouts/boilerplate.ejs") %>
+    <div class="row">
+      <div class="col-8 offset-2">
+    <h2>Create a New listing</h2>
+    <br><br/>
+    <form method="POST" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+           <input name="listing[title]" placeholder="enter Title" type="text" class="form-control" required/>
+           <div class="valid-feedback">
+             Title Looks good!
+          </div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="listing[description]" placeholder="enter decription" type="text" class="form-control" required></textarea>
+            <div class="invalid-feedback">
+               Enter short description
+             </div>
+        </div>
+       <div class="mb-3">
+        <label for="Image" class="form-label">Upload Image</label>
+        <input name="listing[image]"  type="file" class="form-control"> 
+   </div>
+       <div class="row">
+        <div class="mb-3 col-md-5">
+            <label for="price" class="form-label">Price</label>
+            <input name="listing[price]" placeholder="ex 1200" type="number" class="form-control" required>
+            <div class="invalid-feedback">
+               Price should be valid
+            </div>
+       </div>
+       <div class="mb-3 col-md-7">
+            <label for="country" class="form-label">Country</label>
+            <input name="listing[country]" placeholder="enter the country" type="text" class="form-control" required>
+            <div class="invalid-feedback">
+                Country should be valid
+             </div>
+       </div>
+       </div>
+       <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input name="listing[location]" placeholder="Indore M.P" type="text" class="form-control" required>
+            <div class="invalid-feedback">
+                Location should be valid
+             </div>
+       </div>
+       <br><br/>
+        <button class="btn btn-dark ">Add</button>
+    </form>
+ </div>
+</div> 
+
